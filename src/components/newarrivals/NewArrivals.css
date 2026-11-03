@@ -1,0 +1,141 @@
+.new-arrivals {
+  width: 100%;
+  padding: 48px 5% 56px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.new-arrivals h2 {
+  text-align: center;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 36px;
+  color: #0a0a0a;
+}
+
+.new-arrivals .products-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.new-arrivals .product-card {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.new-arrivals .product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.new-arrivals .product-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(145deg, #f4f4f4, #ebebeb);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.new-arrivals .product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.new-arrivals .product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+.new-arrivals .product-card h3 {
+  margin: 14px 4px 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a0a0a;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.new-arrivals .product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 4px 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.new-arrivals .product-rating .stars {
+  color: #f5a623;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.new-arrivals .product-price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 4px 8px;
+}
+
+.new-arrivals .current-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+.new-arrivals .old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.new-arrivals .discount {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e11d48;
+  background: #fff1f2;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+@media (max-width: 1024px) {
+  .new-arrivals .products-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .new-arrivals {
+    padding: 32px 4% 40px;
+  }
+  .new-arrivals .products-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .new-arrivals .product-card h3 {
+    font-size: 13px;
+  }
+  .new-arrivals .current-price {
+    font-size: 15px;
+  }
+}
