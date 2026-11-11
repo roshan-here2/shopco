@@ -82,19 +82,25 @@
   min-width: 90px;
 }
 
-.hero-stats strong {
+.hero-stats strong,
+.hero-stats .stat h2 {
   display: block;
   font-size: 28px;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #0a0a0a;
+  margin: 0;
 }
 
-.hero-stats span {
+.hero-stats span,
+.hero-stats .stat span {
   font-size: 13px;
   color: #777;
 }
 
+/* =====================================
+   HERO IMAGE FIX (Blending & Alignment)
+   ===================================== */
 .hero-image {
   flex: 1;
   display: flex;
@@ -102,12 +108,17 @@
   justify-content: center;
   position: relative;
   z-index: 1;
+  padding-right: 4%;
 }
 
 .hero-image img {
-  max-height: 520px;
+  max-height: 540px;
   width: auto;
   object-fit: contain;
+  /* Image ke white background ko hero background ke sath blend karne ke liye */
+  mix-blend-mode: multiply;
+  filter: contrast(102%) brightness(98%);
+  display: block;
 }
 
 @media (max-width: 900px) {
@@ -121,6 +132,7 @@
   }
   .hero-image {
     min-height: 280px;
+    padding-right: 0;
   }
   .hero-image img {
     max-height: 360px;
@@ -185,18 +197,4 @@
   .brands-section > div {
     font-size: 1rem;
   }
-}
-
-.hero-stats .stat h2 {
-  display: block;
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #0a0a0a;
-  margin: 0;
-}
-
-.hero-stats .stat span {
-  font-size: 13px;
-  color: #777;
 }
