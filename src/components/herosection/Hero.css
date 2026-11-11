@@ -119,7 +119,7 @@
   mix-blend-mode: multiply;
   filter: contrast(102%) brightness(98%);
   display: block;
-  background-color:  #5c5c5c;
+  background:  #5c5c5c;
 }
 
 @media (max-width: 900px) {
