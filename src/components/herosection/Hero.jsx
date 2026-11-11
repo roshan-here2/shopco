@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="hero-image">
 
           <img
-            src="/images/Hero-section1.jpg"
+            src="/images/Hero-section.jpg"
             alt="Fashion models"
           />
 

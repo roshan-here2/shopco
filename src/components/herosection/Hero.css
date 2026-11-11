@@ -117,14 +117,6 @@
   width: auto;
   object-fit: contain;
   display: block;
-
-  /* Image ke grey box ko section gradient ke sath merge karne ke liye */
-  mix-blend-mode: multiply;
-  filter: brightness(1.08) contrast(1.15);
-  
-  /* Agar phir bhi edge reh jaye toh halka mask blend */
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
 }
 
 @media (max-width: 900px) {
