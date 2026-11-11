@@ -115,10 +115,11 @@
   max-height: 540px;
   width: auto;
   object-fit: contain;
-  /* Box edges ko remove karne ke liye */
-  clip-path: inset(0% 12% 0% 12%); /* Left aur right side ke white box ko trim karega */
+  /* Image ke white background ko hero background ke sath blend karne ke liye */
   mix-blend-mode: multiply;
+  filter: contrast(102%) brightness(98%);
   display: block;
+  background-color:  #5c5c5c;
 }
 
 @media (max-width: 900px) {
