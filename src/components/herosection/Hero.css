@@ -108,19 +108,23 @@
   justify-content: center;
   position: relative;
   z-index: 1;
-  padding-right: 4%;
+  /* Blend mode ko enforce karne ke liye */
+  isolation: isolate;
 }
 
 .hero-image img {
   max-height: 540px;
   width: auto;
   object-fit: contain;
-  /* Yeh property image ke white background ko peechay wale section gradient ke sath merge kar degi */
-  mix-blend-mode: multiply;
-  /* Background ko bilkul same shade mein match karne ke liye */
-  filter: contrast(102%) brightness(101%);
   display: block;
-}
+
+  /* Image ke grey box ko section gradient ke sath merge karne ke liye */
+  mix-blend-mode: multiply;
+  filter: brightness(1.08) contrast(1.15);
+  
+  /* Agar phir bhi edge reh jaye toh halka mask blend */
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
 }
 
 @media (max-width: 900px) {
