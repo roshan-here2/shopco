@@ -115,11 +115,12 @@
   max-height: 540px;
   width: auto;
   object-fit: contain;
-  /* Image ke white background ko hero background ke sath blend karne ke liye */
+  /* Yeh property image ke white background ko peechay wale section gradient ke sath merge kar degi */
   mix-blend-mode: multiply;
-  filter: contrast(102%) brightness(98%);
+  /* Background ko bilkul same shade mein match karne ke liye */
+  filter: contrast(102%) brightness(101%);
   display: block;
-  background:  #5c5c5c;
+}
 }
 
 @media (max-width: 900px) {
